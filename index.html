@@ -110,20 +110,7 @@
           0.89,
           0.55
         );
-        ///ground ///
-        /*
-        var ground = BABYLON.Mesh.CreateGroundFromHeightMap(
-          "ground",
-          "https://raw.githubusercontent.com/nicklvov/images/main/height_map_planetoid.png",
-          2000,
-          2000,
-          250,
-          0,
-          100,
-          scene,
-          false
-        );
-        */
+        
         const square = BABYLON.MeshBuilder.CreateGroundFromHeightMap(
           "square",
           "terrain_circle1.png",
@@ -160,20 +147,17 @@
         
         t1.scaling.y = 3;
         t1.translate(BABYLON.Axis.Y, 1, BABYLON.Space.WORLD);
-        //treeMaterial.diffuseColor = BABYLON.Color3.Random();
-        //t1.material = treeMaterial;
-        //console.log("graph=", verts);
-        //console.log("verticies of the tree");
+       
         const t2 = t1.clone()
         t2.translate(BABYLON.Axis.Z, 10, BABYLON.Space.WORLD);
 
         const t3 = t1.clone()
         t3.translate(BABYLON.Axis.X, 10, BABYLON.Space.WORLD);
 
-        for (let i = 0; i < 50; i++) {
+        for (let i = 0; i < 10; i++) {
           let tr = t1.clone()
-          const dx = 50 * (Math.random() - 0.5);
-          const dz = 50 * (Math.random() - 0.5);
+          const dx = 100 * (Math.random() - 0.5);
+          const dz = 100 * (Math.random() - 0.5);
           tr.translate(BABYLON.Axis.X, dx, BABYLON.Space.WORLD);
           tr.translate(BABYLON.Axis.Z, dz, BABYLON.Space.WORLD);
         }
